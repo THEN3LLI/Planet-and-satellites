@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mixkit-yoga-music-04-386.mp3-3a4e69f934b1447d34e6e2f3ec13c5b0.mp3str"
+
+[deps]
+
+source_file="res://mixkit-yoga-music-04-386.mp3"
+dest_files=[ "res://.import/mixkit-yoga-music-04-386.mp3-3a4e69f934b1447d34e6e2f3ec13c5b0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
