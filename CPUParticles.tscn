@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://stars.png" type="Texture" id=1]
+[ext_resource path="res://CPUParticles.gd" type="Script" id=2]
+
+[sub_resource type="ParticlesMaterial" id=27]
+flag_disable_z = true
+direction = Vector3( 1, 1, 0 )
+spread = 0.0
+gravity = Vector3( 30, 30, 0 )
+orbit_velocity = 514.85
+orbit_velocity_random = 0.64
+
+[sub_resource type="Animation" id=28]
+resource_name = "scale"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.01, 0.01 ), Vector2( 0.1, 0.1 ) ]
+}
+
+[node name="CPUParticles" type="Particles2D"]
+scale = Vector2( 0.0405253, 0.0405253 )
+amount = 10
+process_material = SubResource( 27 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/scale = SubResource( 28 )
